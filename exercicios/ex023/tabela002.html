@@ -12,6 +12,7 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         th, td{
@@ -27,7 +28,21 @@
 
         }
 
-        .num{
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(70, 64, 64);
+        }
+
+        tbody > tr:nth-child(odd){   /*Efeito nas Linhas impares*/
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(2n){  /* <- Efeito zebrado 2n para linhas pares ou odd e 2n-1 para impares */
+            background-color: lightgray;
+        }
+
+        td.num{
             text-align: right;
         }
 
